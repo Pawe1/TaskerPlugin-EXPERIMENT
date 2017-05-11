@@ -21,7 +21,7 @@ type
 (**
  * Contains Intent constants necessary for interacting with the plug-in API for Locale.
  *)
-  TIntent = class sealed
+  TIntent = class abstract sealed   // abstract + sealed => prevents instantiation
   public
     const
 //    /**
@@ -264,18 +264,6 @@ type
 //     * @see Intent#ACTION_QUERY_CONDITION
 //     */
       RESULT_CONDITION_UNKNOWN: Integer = 18;
-
-//    /**
-//     * Private constructor prevents instantiation.
-//     *
-//     * @throws UnsupportedOperationException because this class cannot be
-//     *                                       instantiated.
-//     */
-//    private Intent() {
-//        throw new UnsupportedOperationException("This class is non-instantiable"); //$NON-NLS-1$
-//    }
-
-//      constructor Create;
   end;
 
 implementation
